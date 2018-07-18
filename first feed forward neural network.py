@@ -48,19 +48,6 @@ def neural_network_model(data):
 	output_layer = {'weights':tf.Variable(tf.truncated_normal([n_nodes_hl3, n_classes], stddev=0.1)),
 						'biases':tf.Variable(tf.constant(0.1, shape=[n_classes]))}
 
-#   Sentdex Version
-	#hidden_1_layer = {'weights':tf.Variable(tf.random_normal([784, n_nodes_hl1])),
-						#'biases':tf.Variable(tf.random_normal([n_nodes_hl1]))}
-#
-	#hidden_2_layer = {'weights':tf.Variable(tf.random_normal([n_nodes_hl1, n_nodes_hl2])),
-						#'biases':tf.Variable(tf.random_normal([n_nodes_hl2]))}
-#
-	#hidden_3_layer = {'weights':tf.Variable(tf.random_normal([n_nodes_hl2, n_nodes_hl3])),
-						#'biases':tf.Variable(tf.random_normal([n_nodes_hl3]))}
-#
-	#output_layer = {'weights':tf.Variable(tf.random_normal([n_nodes_hl3, n_classes])),
-						#'biases':tf.Variable(tf.random_normal([n_classes]))}
-
 	#(input data * weights) + biases
 
 	l1 = tf.add(tf.matmul(data, hidden_1_layer['weights']), hidden_1_layer['biases'])
